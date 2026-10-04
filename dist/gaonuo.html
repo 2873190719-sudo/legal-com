@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="DbAa5y0puaj4uEVPYE0CEh">
+<head data-page-node-id="htdN4rr0kVaC6CbfKpOY1I">
+<meta charset="utf-8" data-page-node-id="BnXpOko4q8SA4KRXtVUrTh">
+<meta name="viewport" content="width=device-width,initial-scale=1" data-page-node-id="WAuhvDkrhcGlG2dqnpCRpm">
+<title>��ŵ �� �� 20-150 �˵Ĺ�˾�ѹ��������¶�����</title>
+<style>
+:root{
+  --paper:#F6F4EF; --card:#FFFFFF; --ink:#142739; --ink2:#5A6B7D; --ink3:#93A0AE;
+  --orange:#FF6B2C; --orange-l:#FFF2E7; --line:#E4E0D6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);
+  font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+
+/* ���� */
+.top{background:var(--ink);color:#fff;padding:26px 0 30px;margin-bottom:0}
+.top .wrap{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:700;letter-spacing:2px}
+.logo em{font-style:normal;color:var(--orange)}
+.top .sub{font-size:12.5px;color:#9FB3C6;letter-spacing:.5px}
+.top .city{font-size:12.5px;color:#FFB380;margin-left:auto}
+
+/* ���� */
+.hero{background:var(--ink);color:#fff;padding:0 0 34px}
+.hero .hang{font-size:27px;font-weight:700;line-height:1.65;letter-spacing:-.3px}
+.hero .hang em{font-style:normal;color:#FFB380}
+.hero .res{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:16px;color:#D3DEE8;line-height:1.9}
+.hero .res b{color:#FFB380}
+
+/* �� */
+section{margin-top:26px}
+h2{font-size:13px;letter-spacing:3px;color:var(--orange);font-weight:700;margin-bottom:12px}
+h2 span{color:var(--ink3);letter-spacing:0;font-weight:400;font-size:12px;margin-left:8px}
+
+/* ������ */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px}
+.k .w{font-size:17px;font-weight:700;line-height:1.3}
+.k .w i{display:inline-block;width:4px;height:15px;background:var(--orange);border-radius:2px;margin-right:8px;vertical-align:-2px}
+.k .p{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.65}
+
+/* ����� */
+.mis{background:#FDEEE9;border-left:4px solid #C2401B;border-radius:0 12px 12px 0;padding:16px 18px}
+.mis b{color:#C2401B}
+.mis p{font-size:15px;line-height:1.85;margin-top:6px}
+
+/* ������ */
+.did{background:var(--ink);color:#fff;border-radius:14px;padding:22px 22px;text-align:center}
+.did .n{font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.2}
+.did .n em{font-style:normal;color:var(--orange)}
+.did .t{font-size:14.5px;color:#CBD9E6;margin-top:10px;line-height:1.8}
+.did .who{font-size:12.5px;color:#8FA5B8;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+
+/* �������� �� һ��һ�� */
+.idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.idea .lead{font-size:16.5px;font-weight:700;line-height:1.85;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.idea .lead b{color:var(--orange)}
+.i{padding:15px 0;border-bottom:1px dashed var(--line)}
+.i:last-of-type{border:0}
+.i .ih{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:6px}
+.i .ino{flex:none;width:22px;height:22px;border-radius:7px;background:var(--ink);color:#fff;
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.i .iname{font-size:18px;font-weight:700;letter-spacing:1px}
+.i .ialias{font-size:12px;color:var(--ink3);margin-left:auto;letter-spacing:0}
+.i .iwhat{font-size:14.5px;color:var(--ink2);line-height:1.85}
+.i .iwhat b{color:var(--ink)}
+.i .iget{display:block;margin-top:8px;font-size:13px;color:#B8480F;background:var(--orange-l);
+  border-radius:8px;padding:8px 12px;line-height:1.7}
+.i .iget b{color:#8F3200}
+.idea .end{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);
+  font-size:14.5px;color:var(--ink2);line-height:1.9}
+.idea .end b{color:var(--ink)}
+
+/* ������ */
+.three{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px}
+.three li{list-style:none;padding:15px 0;border-bottom:1px dashed var(--line);display:flex;gap:14px;align-items:flex-start}
+.three li:last-child{border:0}
+.three .no{flex:none;width:27px;height:27px;border-radius:8px;background:var(--orange);color:#fff;
+  font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.three .tx b{display:block;font-size:16px;font-weight:700}
+.three .tx span{display:block;font-size:13.5px;color:var(--ink2);margin-top:3px;line-height:1.7}
+
+/* ��ô��ʼ */
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.step .s{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.step .s:last-child{border:0}
+.step .sn{flex:none;width:56px;font-size:12px;font-weight:700;color:var(--orange);letter-spacing:1px;padding-top:3px}
+.step .sx{font-size:15px;line-height:1.8}
+.step .sx b{display:block;margin-bottom:2px}
+
+/* ��ϵ */
+.cta{margin-top:26px;background:var(--orange-l);border:1px solid #F6D9C6;border-radius:14px;padding:20px}
+.cta .t{font-size:17px;font-weight:700;margin-bottom:4px}
+.cta .d{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.7}
+.btn{display:block;background:var(--ink);color:#fff;text-align:center;border-radius:11px;
+  padding:15px 10px;font-size:17px;font-weight:700;text-decoration:none;margin-bottom:10px}
+.btn.o{background:var(--orange)}
+.btn small{display:block;font-size:11.5px;font-weight:400;color:#CBD9E6;margin-top:3px}
+.btn.o small{color:#FFF1E4}
+.fill{font-size:12px;color:#A3480F;background:#FFF;border:1px dashed #F0C4B6;border-radius:8px;
+  padding:9px 12px;margin-top:12px;line-height:1.7}
+
+/* ҳ�� */
+.foot{margin-top:26px;text-align:center;font-size:12px;color:var(--ink3);line-height:1.9}
+.foot b{color:var(--ink2)}
+@media(max-width:420px){
+  .hero .hang{font-size:23px}
+  .did .n{font-size:34px}
+  .grid{grid-template-columns:1fr}
+}
+  .ga{display:inline-flex;align-items:center;gap:5px;}
+  .ga img{width:14px;height:14px;vertical-align:-3px;}
+</style>
+<style>
+/* A small motion layer for the existing Gaonuo page; content is visible by default. */
+:root {
+  --motion-out: cubic-bezier(.23, 1, .32, 1);
+  --motion-press: 140ms;
+  --motion-hover: 200ms;
+}
+
+/* Only JavaScript's successfully registered observer enables pending states. */
+.motion-ready [data-motion].motion-pending {
+  opacity: 0;
+}
+
+.hero .hang em {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.hero .hang em::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 .12em;
+  height: .22em;
+  z-index: -1;
+  background: #ffb38026;
+  transform-origin: left;
+}
+
+.did .n em {
+  display: inline-block;
+}
+
+/* Card entrance uses translate/scale; hover owns transform independently. */
+.grid .k {
+  position: relative;
+  isolation: isolate;
+  transition: transform 220ms var(--motion-out);
+}
+
+.grid .k::before,
+.grid .k::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.grid .k::before {
+  border: 1px solid #ff6b2c70;
+}
+
+.grid .k::after {
+  z-index: -1;
+  box-shadow: 0 18px 32px -12px #14273940;
+}
+
+.grid .k .w i {
+  transform-origin: center;
+  transition: transform 200ms var(--motion-out);
+}
+
+/* Motion occurs on inner rows, keeping the large panels steady while reading. */
+.i .iget {
+  position: relative;
+  overflow: hidden;
+}
+
+.i .iget::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--orange);
+  transform-origin: top;
+}
+
+.cta .btn,
+.price-link {
+  transition: transform var(--motion-hover) var(--motion-out),
+    opacity var(--motion-hover) ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.cta .btn:active,
+.price-link:active {
+  transform: scale(.98);
+  transition-duration: var(--motion-press);
+}
+
+.cta .btn:focus-visible,
+.price-link:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.price-link:focus-visible {
+  outline-color: var(--orange);
+}
+
+/* Keyboard navigation reveals its target immediately. */
+html.keyboard-navigation .cta .btn,
+html.keyboard-navigation .price-link {
+  transition: none;
+  transform: none;
+}
+
+html.keyboard-navigation .grid .k,
+html.keyboard-navigation .grid .k .w i {
+  transition: none;
+  transform: none !important;
+}
+
+html.keyboard-navigation .grid .k::before,
+html.keyboard-navigation .grid .k::after {
+  transition: none;
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .grid .k:hover {
+    transform: perspective(700px) translateY(-6px) scale(1.012);
+  }
+
+  .grid .k:hover::before,
+  .grid .k:hover::after {
+    opacity: 1;
+  }
+
+  .grid .k:hover .w i {
+    transform: scaleY(1.35);
+  }
+
+  .cta .btn:hover,
+  .price-link:hover {
+    transform: translateY(-2px);
+    opacity: .92;
+  }
+
+  .cta .btn:active,
+  .price-link:active {
+    transform: scale(.98);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  .grid .k { transition-duration: 160ms; }
+
+  .grid .k.is-card-pressed {
+    transform: scale(.985);
+    transition-duration: 140ms;
+  }
+
+  .grid .k.is-card-pressed::before { opacity: 1; }
+}
+
+/* Decorations run once with their associated content, never in a loop. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ready .hero .hang.motion-entered em::after {
+    animation: emphasis-in 440ms var(--motion-out) 120ms backwards;
+  }
+
+  .motion-ready .did .n.motion-entered em {
+    animation: case-direction 460ms var(--motion-out) 100ms backwards;
+  }
+
+  .motion-ready .i.motion-entered .iget::before {
+    animation: result-in 320ms var(--motion-out) 110ms backwards;
+  }
+}
+
+@keyframes emphasis-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes case-direction {
+  from { transform: translateX(-8px); opacity: .35; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes result-in {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready [data-motion].motion-pending { opacity: 1; }
+  .grid .k, .grid .k .w i { transition: none; transform: none !important; }
+  .grid .k::before, .grid .k::after { transition: none; }
+  .cta .btn, .price-link { transition: none; }
+  .cta .btn:hover, .price-link:hover,
+  .cta .btn:active, .price-link:active { transform: none; }
+}
+
+</style>
+</head>
+<body data-page-node-id="fIH0M9R7LJ8fBHXbzUgMpa">
+
+<div class="top" data-page-node-id="WKnrSoXUlEmC6Z2ldpE6m4">
+  <div class="wrap" data-motion="fade" data-motion-duration="280" data-page-node-id="XaciL0abOXW0425mzrXeli">
+    <div class="logo" data-page-node-id="KzQ5Le9vGA2nuBCukzG48U">��ŵ<em data-page-node-id="KVyvVzhwUqIxlHQ8cj7Vyt">��</em>��ҵ������ѯ</div>
+    <div class="sub" data-page-node-id="qDYS5X23WuFEBzAsZBhND0">GAONUO</div>
+    <div class="city" data-page-node-id="zJZtUJYZeAJceX2OBew3Z7">��ɽ �� ȫ��ɽ������</div>
+  </div>
+</div>
+
+<div class="hero" data-page-node-id="6WdeozKS7VJVYEP3nMrJdq">
+  <div class="wrap" data-page-node-id="unrzjgjHbNBND8koIBJMGB">
+    <div class="hang" data-motion="rise" data-motion-duration="520" data-page-node-id="MCJambAqGBbxqXwchwlxg0">�� 20 �� 150 �˵Ĺ�˾��<br data-page-node-id="v0FGrtanEMroLnH10m4kR5">��<em data-page-node-id="7rnHrOkmGXs2dM9GZGZooY">����������</em>��������</div>
+    <div class="res" data-motion="rise" data-motion-delay="80" data-page-node-id="1FuEi1QzRg9QhG3UhBPVCA">
+      <b data-page-node-id="qsFQ3S3EmTrE3f6jhBOWj5">�������������</b>�ƶȡ����顢��������Ч��н�ʡ���Ч���ù��ɱ����ù����ա�<br data-page-node-id="qe166erwGDz706cB1GB5eJ">
+      ���Ƿ���һ���ļ����ߡ���<b data-page-node-id="ihfAo7eOLWI9u7vvJfd5eG">�����������ã����Ų����ٸġ�</b>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" data-page-node-id="5Iht45W9MztHWxeB1KLf0e">
+
+  <section data-page-node-id="1RlPl6FIHeZddq4orZeDnU">
+    <h2 data-motion="heading" data-page-node-id="c3DVqUdV7DSBJSzQOyvCsu">�ܵ����İ˼��� <span data-page-node-id="4Bmy1EBJb54PH960RAzaFo">��Ժ�����</span></h2>
+    <div class="grid" data-page-node-id="V5uYDwjPFZHwyQyTk8IEOD">
+      <div class="k" data-motion="card" data-motion-delay="0" data-page-node-id="zjPQBThAnDCQP1CHI4SCV7"><div class="w" data-page-node-id="yJmGnYFip83E3ECy2A7o0V"><i data-page-node-id="5OzvqHXzEzikZC0ImJ7YBh"></i>�ƶ�</div><div class="p" data-page-node-id="ZXdoTu8UtBds08IAc4W0fi">��˾����Щ����ô�죬д����˭���������������Ǹ���һ������ӡ�</div></div>
+      <div class="k" data-motion="card" data-motion-delay="60" data-page-node-id="riqf6G5ARkk8IMQs5An2Yg"><div class="w" data-page-node-id="TfnEVfQ4eCaMssyYVRUeOr"><i data-page-node-id="nEHtb5mUXyJjvnVhJ003Zh"></i>����</div><div class="p" data-page-node-id="3vG4BCK2He2K4DhQwlUjKH">˭���ᡢ��ÿ���������û�н�������ϰ�����쿪��û���ġ�</div></div>
+      <div class="k" data-motion="card" data-motion-delay="0" data-page-node-id="1HUWVeV8w2FNxve1VFKMFW"><div class="w" data-page-node-id="jHgTHlN4bBuWU8SuvUwett"><i data-page-node-id="CHEBsqqug6WEfbLrIYXaZr"></i>����</div><div class="p" data-page-node-id="ZBDKDwjsdmYC5Br1kA0bBs">�ɳ�ʲô���������ܼӣ�д������������������ˡ�</div></div>
+      <div class="k" data-motion="card" data-motion-delay="60" data-page-node-id="Qg1Csfo9GXhcgBCFn1D6wb"><div class="w" data-page-node-id="wPbpFIUFLJZck8MpSE98c9"><i data-page-node-id="aInMKaYj60Yt07K2snkce9"></i>��Ч</div><div class="p" data-page-node-id="1YsWyXI45mrxntSiBZPbHS">�ɵúò��ã��µ��и��������ÿ�ӡ�󡢲��ó��ܡ�</div></div>
+      <div class="k" data-motion="card" data-motion-delay="0" data-page-node-id="Q2V10eDEcCMQmTnuorO3a4"><div class="w" data-page-node-id="BezQ2sBBsSMFRx0Q2l8jf8"><i data-page-node-id="aqfpuwVBYym3P0xLjmuDMg"></i>н��</div><div class="p" data-page-node-id="XMbanhZ22hHUBiujNmjVuv">ÿ����λ����Ǯ����нƾʲô��д����������ÿ��������̸�ͳ�һ�֡�</div></div>
+      <div class="k" data-motion="card" data-motion-delay="60" data-page-node-id="4b7HEByqMnLoBMx50Ia0iC"><div class="w" data-page-node-id="GAO9QWr6QSPHbf6PvDZ6Lo"><i data-page-node-id="WWMjWsTMUhlZvSAeamS2J0"></i>��Ч</div><div class="p" data-page-node-id="WO0W0fZ1GGlY0xjw28fEme">����ô���˵���ֵ��ֵ�����������˸ɵø��죬�Ǳ������ˡ������ظ��</div></div>
+      <div class="k" data-motion="card" data-motion-delay="0" data-page-node-id="uy7c0AeDAxjgiJZKvjVoHx"><div class="w" data-page-node-id="VnXE9eY8UjHuRzMGGDufG3"><i data-page-node-id="LnkuiH3Tua8ztXEYdrnwIX"></i>�ù��ɱ�</div><div class="p" data-page-node-id="9vGPNpippxXRaz5QadlaAQ">һ���˽�����ʵ�ʻ����١�������ֻ��һ�룬�����籣����ס��������ʱ�䡢�������е�Ǯ��</div></div>
+      <div class="k" data-motion="card" data-motion-delay="60" data-page-node-id="0OQjSifg1kpG50EGqZfvhe"><div class="w" data-page-node-id="Lg09kE60VlfpCXFgpn8THD"><i data-page-node-id="5A9CqEDdoHxyTVy7RhMNn8"></i>�ù�����</div><div class="p" data-page-node-id="yI0DdDPSzz1xMm4AspKMlG">��ͬ��ǩ��ûǩ���籣û���롢����û�����̡���ƽʱû�£���һ�ξ��Ǽ���顣</div></div>
+    </div>
+  </section>
+
+  <section data-page-node-id="lhcJPjdzyTHrPkOMiDIYPa">
+    <h2 data-motion="heading" data-page-node-id="bsErCauycYFCi8J9fYOJyM">��˵���һ����</h2>
+    <div class="mis" data-motion="slide" data-page-node-id="PkdzQKICTLYSZmkvsNpaNu">
+      <b data-page-node-id="FJj9xSLd64noQFXYRxo3ET">�Ҳ��������ˡ�</b>
+      <p data-page-node-id="XlsvDII0uC2tLlS4x7d2BI">�����Լ��У��Ұ�����ƶȡ���������Ч��н�������ȶ���������н�����ô������ô�ã������š��н���"������"������"����һ�׹��˵Ķ���"��</p>
+    </div>
+  </section>
+
+  <section data-page-node-id="eaw1Q0EhwCQPbkpWSPMalC">
+    <h2 data-motion="heading" data-page-node-id="7CZR3A5siW7Rbc2aZ39CLZ">������һ��</h2>
+    <div class="did" data-page-node-id="o44eS8JuyFYXHFYGkC9AES">
+      <div class="n" data-motion="rise" data-motion-duration="500" data-page-node-id="4lvQSDgTayhxm78h7SqsQ6">40 �� <em data-page-node-id="51zbIBUMXmAoDK3NGxM5K5">��</em> 140 ��</div>
+      <div class="t" data-motion="fade" data-motion-delay="60" data-page-node-id="1RQ9Ch5jEOViBz3ARQ2hCU">����һ��ʼ����ƺõģ�����һ�࣬����Ƴ����ġ�<br data-page-node-id="XU3941YeZcOizXIkrvqZqz">�м�ֻ�Ĺ����Ρ�</div>
+      <div class="who" data-motion="fade" data-motion-delay="100" data-page-node-id="2tKNTKlRObAZFW2Ti7fj1E">������µ��ˣ�����ʮ�����������ң�ȫ��һ���˸�����</div>
+    </div>
+  </section>
+
+  <section data-page-node-id="5bqmAgUCzKAwL4XKxG7AiP">
+    <h2 data-motion="heading" data-page-node-id="0FFe17oGzIgiC1pxGCmRAe">����ô�� <span data-page-node-id="HBZFOVdKivMicDTAMNI85i">�񿴲�һ��������</span></h2>
+    <div class="idea" data-page-node-id="v2g4i1JMVcBGoOfGCqWhyi">
+      <div class="lead" data-motion="rise" data-page-node-id="yGmWVHlsFTfc8lS4YwAXNW">ͬһ�����⣬��ͬ��˾�ķ��Ӳ�һ����<br data-page-node-id="HEVECFWYNQL19ZyZi2jzZR"><b data-page-node-id="vkUbDojnZmDUMIQHXNQDJ9">���ϲ�������⡪������Ҫ��������á�</b></div>
+
+      <div class="i" data-motion="rise" data-page-node-id="TYBaFm1xX0rsXV1NXwSX6E">
+        <div class="ih" data-page-node-id="eh3EohTkQHquoIggU0uOeE"><span class="ino" data-page-node-id="kU8lLMtW393T1CNzm7Dqfw">1</span><span class="iname" data-page-node-id="jO7Z9oQdGUnvf2Cf77CWlG">��������</span><span class="ialias" data-page-node-id="37igsRYztzVmGGCtqeyKKG">�� �������</span></div>
+        <div class="iwhat" data-page-node-id="aBeoFwKPZKeEKD22QPqM6E">�ȿ��㹫˾<b data-page-node-id="XO7eqOGrT2bICp7XKnAEKH">����ʲô��</b>�����������Ϊʲô���������ˡ���ʲô�ġ������⼸���ˡ�������ô�ܵġ�</div>
+        <div class="iget" data-page-node-id="77e4Lhgf5DkA98kPqOfSBt">����õ���<b data-page-node-id="FLpFOb5TutgyHSJFjyGbwb">���۵���һ�����ģ��ȸ���һ��</b></div>
+      </div>
+
+      <div class="i" data-motion="rise" data-page-node-id="zhIzb8an4trGV7FslsVxFi">
+        <div class="ih" data-page-node-id="C3fnu7F42VFqejWzq5wVq3"><span class="ino" data-page-node-id="waURekVm2sGYXJjt4IvNuF">2</span><span class="iname" data-page-node-id="4HoAXZ4VDc1mAFDNjJpucm">һ��һ��</span><span class="ialias" data-page-node-id="DGUFOClmEpjEGppUvrzaEh">�� ���Ʒ���</span></div>
+        <div class="iwhat" data-page-node-id="Ex6mtWNfgST1iK46n57Wf2">һ�ҹ�˾һ�ס�30 ���� 30 �˸ùܵģ�150 ���� 150 �˸ùܵģ�<b data-page-node-id="sxef9htTPTshKLaeFPmPLc">����ͬһ��ֽ������˾����</b></div>
+        <div class="iget" data-page-node-id="rukEZnudpkFwfN8kMmxnsG">����õ���<b data-page-node-id="MTYA6rIzQGMPtrQAQ16DD1">д������Ǽ���ֽ</b>����˭�������ɵúò�����ô�㡢Ǯ��ô��</div>
+      </div>
+
+      <div class="i" data-motion="rise" data-page-node-id="P9IKc1umsCPwnSejHs6QBd">
+        <div class="ih" data-page-node-id="xjky9HQURczymICNaO8Us9"><span class="ino" data-page-node-id="6sphfbq89Qn9QSb2BhKqHC">3</span><span class="iname" data-page-node-id="nZQcn2Y74mDdXeVLgVe087">�������</span><span class="ialias" data-page-node-id="3XwSqdhjbGfI7Q301iK8mU">�� ������</span></div>
+        <div class="iwhat" data-page-node-id="BD4TdfXBE3jJTNfwAPWFvd">�����������<b data-page-node-id="YRavhiJJgctQZ6BFRIIKLe">����ȥ�����µģ�����ڳ����</b>������Ҳ������������ԭ��</div>
+        <div class="iget" data-page-node-id="nUD4g8nw6iS1LIiOttDSZZ">����õ���<b data-page-node-id="vH2ELs3ifBAGpq9RXvFG4i">��һ��ʱ���ٵ�һ��</b>�����˱��ˡ��������ˣ����Ӹ��ű�</div>
+      </div>
+
+      <div class="end" data-motion="fade" data-page-node-id="bJxhL8EXPeV7CV3C8h2eBA">�Ҽ���̫���ϰ壺<b data-page-node-id="idCuK9gwovV6IJNH64T4OI">�����ƶȡ�����ģ�壬�˻��ǹܲ�ס��</b><br data-page-node-id="jEwPICMRdKBdJybPDB5nCL">�������׶���û�ã���<b data-page-node-id="7OVEUNSSBdIXcBZFDXPMVk">�ǲ������ķ��ӡ�</b></div>
+    </div>
+  </section>
+
+  <section data-page-node-id="CRKBlKBQs3ZxsslohxJ16f">
+    <h2 data-motion="heading" data-page-node-id="UQlRpd4Ma1V4jan5B0rysP">˵���������仰</h2>
+    <ul class="three" data-page-node-id="HgWqSFdZ7A5SorpvPpei59">
+      <li data-motion="rise" data-page-node-id="J84VcY7gP0MLJ6TrWmEo9d"><div class="no" data-page-node-id="nTNXTJZptWte1Q88JXZmqV">1</div><div class="tx" data-page-node-id="pF2WlvZyCN2TboHOjW0v0N"><b data-page-node-id="5rdodD0XDsVN6JIPBHNBQv">�и�ʲô������</b><span data-page-node-id="g6XkZi9cZ3j5IwOseIZ38F">��д��������������ɸ������ƾ�о������䡣</span></div></li>
+      <li data-motion="rise" data-page-node-id="QFbwevN6LF62bsVDUghLOf"><div class="no" data-page-node-id="l7dS86SuwCO5jlU3wtwSxj">2</div><div class="tx" data-page-node-id="sB8CQ4asfmtl3NBPGTHAFk"><b data-page-node-id="cz1hDSLCS68DwGpRIvWEva">˭��������</b><span data-page-node-id="WK8N9oqusW3u3GRxWD0RAp">����д����������ᡪ���ϰ岻�������Ǹ�"��������"���ˡ�</span></div></li>
+      <li data-motion="rise" data-page-node-id="3Gp1vo6OT36pad33NmQREV"><div class="no" data-page-node-id="OSPUjlZ70E9OlVC7jM1PCC">3</div><div class="tx" data-page-node-id="N2CJsuqXWidY6F2OuisLZl"><b data-page-node-id="lU3ov1dl6WqyCQLGMq69Dp">Ǯ��ô�����˲ŷ�</b><span data-page-node-id="foAvCpJwK8AUp8eUxYN7YY">�µ��и��������ó���Ҳ����ÿ��������̸������һ�Ρ�</span></div></li>
+    </ul>
+  </section>
+
+  <section data-page-node-id="XSUVXNQvuRdqvjfBIun2ew">
+    <h2 data-motion="heading" data-page-node-id="jgHGZFgw0ceYjUPsGAkau3">��һ�����ң�����ô����</h2>
+    <div class="step" data-page-node-id="jlVjALBGVq9RvYCyNOxFd4">
+      <div class="s" data-motion="slide" data-page-node-id="0Xo94HH8JbY0f6THKdR3MF"><div class="sn" data-page-node-id="nP4pcHKcTJL8ASOGUAmEgg">��һ��</div><div class="sx" data-page-node-id="GprZpcJkY9RlCpuAMzTFuD"><b data-page-node-id="TedPk9O0qWYsamcDXr2rpi">������Ϣ����</b>�����Ҷ����ˡ���ʲô�ġ���ͷ����һ�顣����׼�����ϡ�</div></div>
+      <div class="s" data-motion="slide" data-page-node-id="IQXwBkW2Ck3ZQa3XMBlBhu"><div class="sn" data-page-node-id="d4ZbY4IRuREUQ90UjJvRfd">�ڶ���</div><div class="sx" data-page-node-id="aRWWstlZZtmNYA1J6m56Yr"><b data-page-node-id="82YdSF0CQVkbt158pQJH38">�ҵ���˾��һ��</b>����������ô�ܵġ���Щ�ط���©��©Ǯ��<b data-page-node-id="SyWVdCcIIvX0Dxo13KFxum">��һ�β�ҪǮ��</b></div></div>
+      <div class="s" data-motion="slide" data-page-node-id="EOeov4f2z9FbOaMvDqryxh"><div class="sn" data-page-node-id="jrNVc0YeiWr44UYcfy81PL">������</div><div class="sx" data-page-node-id="VxRooTHAsbMaQx2cUKEskM"><b data-page-node-id="qViLHAWlajD79QZdsANbUZ">��˵���ȸ���һ��</b>����öԣ�������̸��ô�����ߣ����ò��ԣ��͵���������һ���졣</div></div>
+    </div>
+  </section>
+
+  <!-- price-nav -->
+<div class="price-card" data-motion="surface" style="max-width:720px;margin:26px auto 0;padding:18px 16px;background:#142739;border-radius:14px;color:#fff;text-align:center">
+  <div style="font-size:15px;font-weight:700;margin-bottom:6px">�۸�����һҳ�������һҳ</div>
+  <div style="font-size:13px;color:#C6D3E0;line-height:1.8;margin-bottom:12px">�����١�ȫ�׶��١����ʶ���Ǯһ���£�ȫ������ˡ�</div>
+  <a class="price-link" href="https://dabiaojiehr.top/company-price.html" style="display:block;background:#FF6B2C;color:#fff;text-decoration:none;border-radius:11px;padding:13px;font-size:16px;font-weight:700">����ҵ������۸� ��</a>
+</div>
+
+<div class="cta" data-page-node-id="xzc8LNzNimDLVDaGeEqGG1">
+    <div class="t" data-motion="fade" data-motion-delay="60" data-page-node-id="KfjFkuIC0kTwkzCXBHNXMn">����һ�Σ���ҪǮ</div>
+    <div class="d" data-motion="fade" data-motion-delay="60" data-page-node-id="Pjc87nAzDjuFTsMkvdHoha">��ֻҪ�����ң���˾���ڶ����ˡ���ʲô�ġ���ͷ����һ�顣<br data-page-node-id="VBuNzRaTxuaWS2bLr1LvMB">�����ó����㿨����һ����</div>
+    <a class="btn" data-motion="fade" href="tel:13680221332">��绰����<small>13680221332��������һ��ֱ�Ӳ��ţ����� 10 ���ӣ��ܲ��ܰ�����һ����֪��</small></a>
+    <a class="btn o" data-motion="fade" data-motion-delay="60" href="https://dabiaojiehr.top/wechat-qr.jpg" target="_blank" rel="noopener">����΢��<small>�㿪��ά�룬����ʶ���ɨһɨ���ӣ���ע"�Ĺ���"ͨ���죩</small></a>
+  </div>
+
+  <div class="foot" data-motion="fade" data-motion-duration="320" data-page-node-id="2J31hwBmiJemTIELRKe6ax">
+    <b data-page-node-id="tCwELmxd78SDkwIZXQG7BL">��ɽ�и�ŵ��ҵ������ѯ���޹�˾</b><br data-page-node-id="exxsaWmJaYOf9qrxKgmWhn">
+    ͳһ������ô��� 91442000MAD5WHQA3P<br data-page-node-id="2rOzaHAzLS33jYhpzZTHqv">
+    ��ɽ�й�����ܶ�����·26��A��3¥֮2���������񸲸���ɽ������
+  
+    <br>
+    <span class="ga"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAFQklEQVRYw+3Wa1BUdRjH8SOpMeg4WhZGpDIxiaaTeUFgWrxE4AVRQJGlRRAVIV1JkbgMgQLi5AVBQSVLSp0xlEAUKBEEFZCrCstll8UV2AV2YbmoGCrYv31+R95UL5pmmtamZ+bz6rz5nvOc/5zDcX9jGLs/iTxuyvIlWYkRFeTHA2HVRFtzfhthTG5KuH96/vUgNlC4mMgyw1NJit/aAXLKazYje9xtIMZ/OZz50gW+9hcNkvoLEemEPbnrSP47QYwxQ5Ifv54RqzcXwFFvSyjaOhfavN8F7Y5ZcC/HH9JOB4LNa9Zw5YA76OZV8vIGMdZtSp7cDrtOnOavYiQhTAiPwi1AMtIQaqyngsxpBtw2GAGDKfaQmpUAa6xc4Vfp4UtEdzAMycsT9JQ1Tyctl/2eEkuTlYysF/rCUNxMqDEzgTqzSXBnpgnIHCzgjvEEuD52DLBr3rA1MAaWmNtB582wdtIljZ9G9D+IPU6aTxIPBjHCcXvg3CEh9K2fDLWvjIH6D6fwTIyheuwEqLUyhzLOALq8pkN+bgRw3HY4FBsMzxojZxP9DequLjAlQwVrbpIjhyIY4UYGQ/buhdBqPxlk3Gion2IMDQIz3kJe/ZS34I7uHkmD7VSQVgYDNyIAwsNCgfXGXoOBPjP9DKrOCAogA2etGTmTHAMcFwFZye7wS5QlVHGjoEw4A2qPCUBZ6AzNcQ5Q/YYRdO+YB1U3dsDwypLio4FJ3ECryIzWz6Cm3NgTRHN8HiPF6eHAGSbAdh8feFZkB7krzaHE9h2o85sDsiAbkIsXQMN+e2CtGyF0kzdwXCgU5++D/ouLQFV4OEU/g2Q/iNuIPNaKkQflAWBqexxGjhLDVUcL6IwSQN3SGVChe6FJg9dckCx6D1QBliDZLIAxo7eA8eyv4KE0BJqTrHkZvnL9DJKn+Twmt0NsGGHZy2Dn3kQYfsQ53Hh4/r4RNGz8AIpdzKEuaAF0RC2E57MmQgE3ATjuM/CPiANW7AqSfQJQ5vk362eQKmd3JrmXsoSRocpNIMnbB9zbceDIWUPmuHFQNMkISqa9DpUvNK6YDpW2s8DfwBK48WFQnhMCgzUBoLy0BrRVe5P0NWjPLdKUsJiR1tR1wGp8IeZwMgx/SrgRvjxuAziNcwLvyathLOcJHLflhRDYGRYFrNET2rJ5yvPLoas0tOj/oL8UpC4JHyTSU+6MNCS4gvKoAB5WiKG+MAQSg0WwLXQ/ZJ3xhao0FxB5hYCbUwAEfhEF3Td8QP2dAOQnPwFlxgrolUVq9TPoaX+ZB2nLc2Gk6awj1MU78HZZwJMid2Byb550JQwVO0NfxlJgdz14vWKeRAiK6DlQF28PLZdcoLNcBIO92bb6GTQ8Q/13RURT6tlH2gvXMlITLYD6uI+gp2ozdF0VQXumM6ivCqGvahM8kPiDItkeGo8tB025GFQ3xFrSr06zI3/4yde7oN7m0sWk5eKWDqK5JWJQvAHac9ygq3Adr9gTNNc3QG85rzPfHe5/7wDtPwuhp/Zz6CjyhaZzwi6ivfetHdH/oP77+3PJQOsuRnqkQdCa4wWqyx6gyecpL64GTaEX7ycXUJz4GJp1B4O0X/Hg0Xp1tFV+8Ei1k6c5coHofxBrrzQinbKYo0SVJ+wn6iurGHlY5gY911aDJnMFaHXXiDp9GQyvtKfUA9QFTtBZ7gPdit0tpFd9OpwwFmlA9D/o9yNLDpxIKmI8PMnNSNtviCLVpYTITzrXEGWaq4qos0WgOPdpCenIF+eRrurjB4k0PXopYZG6gMg/D/gNBUxhAbSAmKMAAAAASUVORK5CYII=" alt="��������"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=44200102446396" rel="noreferrer" target="_blank">����������44200102446396��</a></span>
+    <span style="margin:0 10px;opacity:.4">|</span>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">��ICP��2024207887��-3</a>
+  </div>
+
+</div>
+<script>
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  const elements = [...document.querySelectorAll("[data-motion]")];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const narrowScreen = window.matchMedia("(max-width: 420px)");
+  const activeAnimations = new Map();
+  const easing = "cubic-bezier(.23, 1, .32, 1)";
+  let observer;
+
+  // Pointer movement is decorative. One scheduled write per frame, only on the
+  // card under the mouse; entrance motion uses separate transform properties.
+  const cards = [...document.querySelectorAll(".grid .k")];
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  let pointerFrame = 0;
+  let pointerCard;
+  let pointerX = 0;
+  let pointerY = 0;
+  let cardBounds;
+
+  const resetCards = () => {
+    window.cancelAnimationFrame(pointerFrame);
+    pointerFrame = 0;
+    pointerCard = null;
+    cards.forEach((card) => {
+      card.style.removeProperty("transform");
+      card.classList.remove("is-card-pressed");
+    });
+  };
+
+  cards.forEach((card) => {
+    // Non-button elements receive :active late in some mobile browsers. A
+    // passive pointer handler provides feedback at touch-down without blocking
+    // native scrolling or capturing the finger's pointer.
+    card.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "touch" && !finePointer.matches && !reduceMotion.matches) {
+        card.classList.add("is-card-pressed");
+      }
+    }, { passive: true });
+    card.addEventListener("pointerenter", (event) => {
+      if (event.pointerType !== "mouse" || !finePointer.matches || reduceMotion.matches) return;
+      cardBounds = card.getBoundingClientRect();
+      pointerCard = card;
+    });
+    card.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse" || !finePointer.matches || reduceMotion.matches ||
+        event.buttons || root.classList.contains("keyboard-navigation") || pointerCard !== card) return;
+      // Cache the rectangle at entry rather than reading transformed geometry
+      // during every pointer event (which would feed the tilt back into itself).
+      pointerX = Math.max(-1, Math.min(1, (event.clientX - cardBounds.left) / cardBounds.width * 2 - 1));
+      pointerY = Math.max(-1, Math.min(1, (event.clientY - cardBounds.top) / cardBounds.height * 2 - 1));
+      if (pointerFrame) return;
+      pointerFrame = window.requestAnimationFrame(() => {
+        pointerFrame = 0;
+        if (!pointerCard) return;
+        pointerCard.style.transform = `perspective(700px) translateY(-6px) rotateX(${-pointerY * 2.2}deg) rotateY(${pointerX * 2.2}deg) scale(1.012)`;
+      });
+    });
+    card.addEventListener("pointerleave", resetCards);
+    card.addEventListener("pointercancel", resetCards);
+  });
+  const releaseCardPress = () => cards.forEach((card) => card.classList.remove("is-card-pressed"));
+  document.addEventListener("pointerup", releaseCardPress, { passive: true });
+  document.addEventListener("pointercancel", releaseCardPress, { passive: true });
+  const onCardPreferenceChange = () => {
+    if (reduceMotion.matches || !finePointer.matches) resetCards();
+  };
+  [reduceMotion, finePointer].forEach((query) => {
+    if (query.addEventListener) query.addEventListener("change", onCardPreferenceChange);
+    else query.addListener(onCardPreferenceChange);
+  });
+  window.addEventListener("resize", resetCards);
+  window.addEventListener("pagehide", resetCards);
+
+  // No scroll listener, animation library, or permanent invisible default state.
+  const showImmediately = (element) => {
+    observer?.unobserve(element);
+    element.classList.remove("motion-pending");
+    activeAnimations.get(element)?.cancel();
+    activeAnimations.delete(element);
+  };
+
+  const stopMotion = () => {
+    observer?.disconnect();
+    root.classList.remove("motion-ready");
+    elements.forEach(showImmediately);
+    resetCards();
+  };
+
+  const reveal = (element, staggerDelay) => {
+    if (!element.classList.contains("motion-pending")) return;
+    observer.unobserve(element);
+    element.classList.remove("motion-pending");
+
+    if (reduceMotion.matches || root.classList.contains("keyboard-navigation")) return;
+
+    const small = narrowScreen.matches;
+    const kind = element.dataset.motion;
+    const cardMotion = kind === "card";
+    const from = {
+      fade: "none",
+      heading: `translateY(${small ? 6 : 10}px)`,
+      rise: `translateY(${small ? 10 : 16}px)`,
+      slide: `translateX(${small ? -6 : -12}px)`,
+      surface: `translateY(${small ? 10 : 16}px) scale(.985)`,
+    }[kind] || "translateY(12px)";
+
+    const frames = cardMotion ? [
+      { opacity: 0, translate: `0 ${small ? 16 : 24}px`, scale: small ? ".985" : ".97" },
+      { opacity: 1, translate: "0 0", scale: "1" },
+    ] : [
+      { opacity: 0, transform: from },
+      { opacity: 1, transform: "none" },
+    ];
+    const animation = element.animate(frames, {
+      duration: cardMotion ? (small ? 420 : 540) : (small ? 360 : (Number(element.dataset.motionDuration) || 460)),
+      delay: cardMotion ? Math.min(staggerDelay || 0, small ? 90 : 220) :
+        (small ? 0 : Math.min(staggerDelay ?? (Number(element.dataset.motionDelay) || 0), 120)),
+      easing,
+      // After completion the original CSS owns the element again, including hover.
+      fill: "backwards",
+    });
+
+    activeAnimations.set(element, animation);
+    element.classList.add("motion-entered");
+    animation.finished.then(() => activeAnimations.delete(element), () => {});
+  };
+
+  document.addEventListener("keydown", (event) => {
+    if (!["Tab", "Enter", " ", "Escape"].includes(event.key)) return;
+    root.classList.add("keyboard-navigation");
+    // Finish pending and current motion before keyboard focus can reach a link.
+    stopMotion();
+  });
+  document.addEventListener("pointerdown", () => root.classList.remove("keyboard-navigation"));
+  document.addEventListener("focusin", (event) => {
+    const target = event.target.closest?.("[data-motion]");
+    if (target) showImmediately(target);
+  });
+
+  if (reduceMotion.matches || !("IntersectionObserver" in window) || !Element.prototype.animate) return;
+
+  try {
+    observer = new IntersectionObserver((entries) => {
+      try {
+        const groups = new Map();
+        entries.filter((entry) => entry.isIntersecting).forEach((entry) => {
+          const group = entry.target.closest(".grid, .idea, .three, .step");
+          // Stagger only siblings entering together; a lone row has no delay.
+          const index = group ? (groups.get(group) || 0) : 0;
+          if (group) groups.set(group, index + 1);
+          const cardMotion = entry.target.dataset.motion === "card";
+          const delay = cardMotion ? (narrowScreen.matches ? index * 30 : Math.floor(index / 2) * 60 + index % 2 * 40) : index * 50;
+          reveal(entry.target, group ? delay : undefined);
+        });
+      } catch {
+        // A browser animation failure must never make the page unreadable.
+        stopMotion();
+      }
+    }, { threshold: .08, rootMargin: "0px 0px -16px 0px" });
+
+    elements.forEach((element) => {
+      element.classList.add("motion-pending");
+      observer.observe(element);
+    });
+    root.classList.add("motion-ready");
+  } catch {
+    stopMotion();
+    return;
+  }
+
+  const onPreferenceChange = () => { if (reduceMotion.matches) stopMotion(); };
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener("change", onPreferenceChange);
+  else reduceMotion.addListener(onPreferenceChange);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      activeAnimations.forEach((animation) => animation.finish());
+      resetCards();
+    }
+  });
+  window.addEventListener("pagehide", stopMotion);
+})();
+
+</script>
+</body>
+</html>

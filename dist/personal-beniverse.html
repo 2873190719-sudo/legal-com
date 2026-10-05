@@ -24,19 +24,25 @@
   <meta property="og:image" content="https://2873190719-sudo.github.io/legal-com/dist/assets/lawyer-deng.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
+    :root{--header-bg:#fff;--header-fg:#1d2938}
+    .preview-switcher{flex-wrap:wrap;row-gap:4px}
+    .preview-switcher a{white-space:nowrap}
+    .motion-menu-button{width:44px;height:44px;flex:0 0 44px;align-items:center;justify-content:center;padding:0;border:1px solid var(--line);border-radius:2px;background:#fff;color:var(--navy);font-size:20px;line-height:1}
+    .motion-menu-button:hover{background:var(--paper)}
+    .profile-grid>*,.profile-person>*,.faq-grid>*,.contact-grid>*{min-width:0}
     .profile-person{display:grid;grid-template-columns:minmax(150px,.68fr) minmax(0,1.32fr);align-items:start;gap:26px;min-width:0}
-    .profile-portrait{position:relative;aspect-ratio:.82;overflow:hidden;background:#e9e8e4}
+    .profile-portrait{position:relative;margin:0;min-width:0;aspect-ratio:.82;overflow:hidden;background:#e9e8e4}
     .profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
     .profile-portrait figcaption{position:absolute;inset:auto 0 0;padding:24px 12px 9px;background:linear-gradient(0deg,#182331d9,transparent);color:#fff;font-size:10px}
-    @media(max-width:850px){.profile-person{grid-template-columns:minmax(112px,.5fr) minmax(0,1.5fr);gap:20px}.profile-name{font-size:29px}}
-    @media(max-width:600px){.profile-person{grid-template-columns:minmax(88px,.36fr) minmax(0,1fr);gap:15px}.profile-name{font-size:24px;line-height:1.5}.profile-intro{font-size:13px;line-height:1.8}.profile-actual{font-size:11px;line-height:1.8;padding-top:14px;margin-top:15px}}
-    @media(max-width:350px){.profile-person{grid-template-columns:74px minmax(0,1fr);gap:11px}.profile-name{font-size:21px}.profile-firm{font-size:10px;margin-bottom:12px}}
+    @media(max-width:850px){.profile-grid{grid-template-columns:1fr;gap:32px}.profile-person{grid-template-columns:minmax(180px,.5fr) minmax(0,1fr);gap:30px}.profile-name{font-size:29px}}
+    @media(max-width:600px){.profile-person{grid-template-columns:1fr;gap:24px}.profile-portrait{width:min(100%,320px);aspect-ratio:1/1.1}.profile-name{font-size:26px;line-height:1.5}.profile-intro{font-size:15px;line-height:1.9}.profile-actual{font-size:13px;line-height:1.9;padding-top:18px;margin-top:20px}}
+    @media(max-width:350px){.profile-name{font-size:24px}.profile-firm{font-size:11px;margin-bottom:15px}}
   </style>
   <link rel="stylesheet" href="personal-motion.css" />
   <script src="personal-motion.js" defer></script></head>
 <body data-page="personal">
   <a class="skip-link" href="#main">跳转到正文</a>
-  <div class="preview-switcher" aria-label="试版切换"><span>个人法律事务 · 四种页面设计</span><a href="personal-star.html">A · 需求引导版</a><a href="personal-beniverse.html" aria-current="page">B · 律师介绍版</a><a href="personal-ressuman.html">C · 律所经典</a><a href="personal-nova.html">D · Nova 编辑</a><a href="compare-personal.html">四版对比 ↗</a></div>
+  <div class="preview-switcher" aria-label="四版页面切换"><span>个人法律事务 · 四种页面设计</span><a href="personal-star.html">A 需求引导</a><a href="personal-beniverse.html" aria-current="page">B 律师介绍</a><a href="personal-ressuman.html">C 律所经典</a><a href="personal-nova.html">D Nova 编辑</a><a href="compare-personal.html">四版对比 ↗</a></div>
   <header class="site-header" data-site-header id="top"><div class="wrap header-inner"><a class="brand" href="#top"><strong id="brandName">邓彩婷律师</strong><small>广东融朗律师事务所 · 中山 · 珠三角</small></a><button class="motion-menu-button" data-menu-toggle type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="展开导航"><span aria-hidden="true">☰</span></button><nav class="nav" data-mobile-nav id="mobileNav" aria-label="页面导航"><a href="#lawyer">认识律师</a><a href="#services">法律事务</a><a href="#faq">常见问题</a><a class="nav-cta" href="#contact">联系律师 ↗</a></nav></div></header>
   <main id="main">
     <section class="hero" aria-labelledby="heroTitle"><div class="hero-content"><p class="eyebrow">个人 · 家庭 · 工作 · 交易</p><div class="hero-rule" aria-hidden="true"></div><h1 id="heroTitle">把复杂的事，<br>说给懂法律的人。</h1><p class="hero-lede">朋友推荐您来到这里，先认识一位律师。<br>无论是合同债务、家庭争议，还是知识产权等法律问题，<br>都可以先说明情况，再一起理清下一步。</p><div class="hero-actions"><a class="button button-primary" href="#contact">先聊聊我的情况 <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#lawyer">认识邓律师</a></div><p class="hero-note">约 10 分钟免费初步沟通 · 由同所执业律师接待</p></div></section>

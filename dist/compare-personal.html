@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>个人客户页面｜两版效果比较</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #23312b; background: #e8eae7; font: 14px/1.5 "PingFang SC", "Microsoft YaHei", sans-serif; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    .toolbar { min-height: 76px; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; background: #fff; border-bottom: 1px solid #d6dbd6; }
+    .title { font-size: 13px; font-weight: 600; white-space: nowrap; }
+    .title small { display: block; margin-top: 4px; color: #627066; font-size: 11px; font-weight: 400; }
+    .variants, .display-options { display: flex; gap: 5px; align-items: center; }
+    .variants { padding: 4px; border: 1px solid #d6dbd6; border-radius: 8px; }
+    .variants button { padding: 10px 17px; border: 0; border-radius: 5px; background: none; color: #23312b; white-space: nowrap; }
+    .variants button[aria-pressed="true"] { color: #fff; background: #23312b; }
+    .display-options button { min-height: 40px; padding: 8px 10px; border: 0; border-radius: 4px; color: #68746c; background: none; }
+    .display-options button[aria-pressed="true"] { color: #23312b; background: #eef0ec; }
+    .open-link { margin-left: 10px; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
+    .stage { height: calc(100dvh - 76px); min-height: 450px; display: flex; justify-content: center; }
+    iframe { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
+    body[data-device="phone"] .stage { padding: 14px 0; }
+    body[data-device="phone"] iframe { width: 390px; max-width: 100%; box-shadow: 0 8px 35px #2531261a; }
+    :focus-visible { outline: 3px solid #b88235; outline-offset: 3px; }
+    noscript { display: block; padding: 16px; text-align: center; }
+    @media (max-width: 1000px) { .title { display: none; } }
+    @media (max-width: 600px) {
+      .toolbar { min-height: 114px; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 10px 12px; }
+      .variants { justify-content: center; }
+      .variants button { padding: 9px 13px; font-size: 12px; }
+      .display-options button { min-height: 32px; font-size: 12px; }
+      .open-link { font-size: 11px; }
+      .stage { height: calc(100dvh - 114px); }
+      body[data-device="phone"] .stage { padding: 0; }
+    }
+  </style>
+</head>
+<body data-device="desktop">
+  <header class="toolbar">
+    <div class="title">个人客户页面<small>两种方向，直接切换比较</small></div>
+    <nav class="variants" aria-label="选择页面版本">
+      <button type="button" data-version="star" aria-pressed="true">A · 需求引导版</button>
+      <button type="button" data-version="beniverse" aria-pressed="false">B · 律师介绍版</button>
+    </nav>
+    <div class="display-options" role="group" aria-label="预览尺寸">
+      <button type="button" data-device="desktop" aria-pressed="true">电脑</button>
+      <button type="button" data-device="phone" aria-pressed="false">手机</button>
+      <a class="open-link" id="openCurrent" href="personal-star.html" target="_blank" rel="noopener">单独打开 ↗</a>
+    </div>
+  </header>
+  <noscript>直接查看 <a href="personal-star.html">需求引导版</a> 或 <a href="personal-beniverse.html">律师介绍版</a>。</noscript>
+  <main class="stage">
+    <iframe id="preview" src="personal-star.html" title="需求引导版个人客户页面"></iframe>
+  </main>
+  <script>
+    (() => {
+      const frame = document.getElementById('preview');
+      const openCurrent = document.getElementById('openCurrent');
+      const versions = { star: ['personal-star.html', '需求引导版'], beniverse: ['personal-beniverse.html', '律师介绍版'] };
+      document.querySelectorAll('[data-version]').forEach(button => {
+        button.addEventListener('click', () => {
+          const [url, name] = versions[button.dataset.version];
+          document.querySelectorAll('[data-version]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+          frame.src = url;
+          frame.title = name + '个人客户页面';
+          openCurrent.href = url;
+        });
+      });
+      document.querySelectorAll('button[data-device]').forEach(button => {
+        button.addEventListener('click', () => {
+          document.body.dataset.device = button.dataset.device;
+          document.querySelectorAll('button[data-device]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        });
+      });
+      frame.addEventListener('load', () => {
+        try {
+          const switcher = frame.contentDocument.querySelector('.preview-switcher');
+          if (switcher) switcher.hidden = true;
+        } catch { /* Standalone links remain available when framed access is unavailable. */ }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -4,84 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>个人客户页面｜两版效果比较</title>
+  <meta name="theme-color" content="#f2f2ef" />
+  <meta name="description" content="并排浏览邓彩婷律师的四种个人业务页面设计，可切换电脑和两种手机尺寸。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="邓彩婷律师｜四种个人业务页面设计" />
+  <meta property="og:description" content="挑选您最愿意转发给朋友的一种表达。" />
+  <meta property="og:image" content="https://2873190719-sudo.github.io/legal-com/dist/assets/lawyer-deng.jpg" />
+  <title>个人业务页面 · 四种设计</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23192c25'/%3E%3Ctext x='16' y='45' fill='%23f6f4ed' font-size='37' font-family='serif'%3E%E9%82%93%3C/text%3E%3C/svg%3E" />
   <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; color: #23312b; background: #e8eae7; font: 14px/1.5 "PingFang SC", "Microsoft YaHei", sans-serif; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    button { font: inherit; cursor: pointer; }
-    a { color: inherit; text-decoration: none; }
-    .toolbar { min-height: 76px; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; background: #fff; border-bottom: 1px solid #d6dbd6; }
-    .title { font-size: 13px; font-weight: 600; white-space: nowrap; }
-    .title small { display: block; margin-top: 4px; color: #627066; font-size: 11px; font-weight: 400; }
-    .variants, .display-options { display: flex; gap: 5px; align-items: center; }
-    .variants { padding: 4px; border: 1px solid #d6dbd6; border-radius: 8px; }
-    .variants button { padding: 10px 17px; border: 0; border-radius: 5px; background: none; color: #23312b; white-space: nowrap; }
-    .variants button[aria-pressed="true"] { color: #fff; background: #23312b; }
-    .display-options button { min-height: 40px; padding: 8px 10px; border: 0; border-radius: 4px; color: #68746c; background: none; }
-    .display-options button[aria-pressed="true"] { color: #23312b; background: #eef0ec; }
-    .open-link { margin-left: 10px; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
-    .stage { height: calc(100dvh - 76px); min-height: 450px; display: flex; justify-content: center; }
-    iframe { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
-    body[data-device="phone"] .stage { padding: 14px 0; }
-    body[data-device="phone"] iframe { width: 390px; max-width: 100%; box-shadow: 0 8px 35px #2531261a; }
-    :focus-visible { outline: 3px solid #b88235; outline-offset: 3px; }
-    noscript { display: block; padding: 16px; text-align: center; }
-    @media (max-width: 1000px) { .title { display: none; } }
-    @media (max-width: 600px) {
-      .toolbar { min-height: 114px; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 10px 12px; }
-      .variants { justify-content: center; }
-      .variants button { padding: 9px 13px; font-size: 12px; }
-      .display-options button { min-height: 32px; font-size: 12px; }
-      .open-link { font-size: 11px; }
-      .stage { height: calc(100dvh - 114px); }
-      body[data-device="phone"] .stage { padding: 0; }
-    }
+    :root{color-scheme:light;--page:#efefec;--paper:#fff;--ink:#182821;--muted:#69746c;--line:#d9dcd6;--accent:#315e4c;--warm:#b58c54;--ease:cubic-bezier(.23,1,.32,1)}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;min-height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:var(--page);color:var(--ink);font:14px/1.5 "Microsoft YaHei","PingFang SC",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{font:inherit;color:inherit;cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    .toolbar{position:relative;z-index:2;flex:none;display:grid;grid-template-columns:minmax(182px,.65fr) minmax(480px,1.65fr) minmax(196px,.72fr);align-items:center;gap:20px;padding:14px clamp(14px,2.2vw,34px);background:var(--paper);border-bottom:1px solid var(--line)}
+    .brand{display:flex;gap:12px;align-items:center;min-width:0}
+    .brand-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;font-family:serif;font-size:21px}
+    .brand-copy{min-width:0}
+    .brand-copy strong{display:block;font-size:13px;line-height:1.4;font-weight:650}
+    .brand-copy small{display:block;margin-top:2px;color:var(--muted);font-size:11px}
+    .variants{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;min-width:0;padding:4px;border:1px solid var(--line);border-radius:11px;background:#f6f6f3}
+    .variants button{min-width:0;min-height:46px;padding:7px 10px;border:0;border-radius:8px;background:transparent;text-align:left;transition:background-color 180ms var(--ease),color 180ms var(--ease),transform 160ms var(--ease)}
+    .variants button:hover{background:#eaede7}
+    .variants button[aria-pressed="true"]{background:var(--ink);color:white}
+    .variant-letter{display:inline-grid;place-items:center;width:21px;height:21px;margin-right:5px;border:1px solid currentColor;border-radius:50%;font-size:10px}
+    .variant-label{font-size:12px;white-space:nowrap}
+    .actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-width:0}
+    .device-group{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:9px;background:#f7f7f5}
+    .device-group button{min-width:45px;min-height:36px;padding:7px 8px;border:0;border-radius:6px;background:transparent;color:var(--muted);font-size:11px;transition:background-color 180ms var(--ease),color 180ms var(--ease)}
+    .device-group button[aria-pressed="true"]{background:white;color:var(--ink);box-shadow:0 1px 4px #20382b14}
+    .open-link,.replay{min-height:42px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:white;font-size:11px;white-space:nowrap}
+    .replay{min-width:42px;padding-inline:10px}
+    .open-link:hover,.replay:hover{border-color:#9da69e;background:#fafaf8}
+    button:focus-visible,a:focus-visible{outline:3px solid #a47740;outline-offset:3px}
+    button:active,.open-link:active,.replay:active{transform:scale(.98)}
+    .active-info{min-height:31px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(14px,2.2vw,34px);background:#f5f5f2;color:#657068;font-size:11px}
+    .active-info strong{color:var(--ink);font-weight:600}
+    .active-info span:last-child{white-space:nowrap}
+    .stage{position:relative;flex:1;min-height:0;display:flex;justify-content:center;padding:0;background:#f8f8f6}
+    .frame-shell{position:relative;width:100%;height:100%;min-width:0;overflow:hidden;background:white;transition:width 240ms var(--ease),box-shadow 240ms var(--ease),border-radius 240ms var(--ease)}
+    iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+    .load-state{position:absolute;inset:0;z-index:1;display:grid;place-items:center;background:#f8f8f6;color:#5d6960;font-size:13px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 160ms var(--ease),visibility 160ms}
+    .load-state[data-visible="true"]{opacity:.96;visibility:visible}
+    .load-copy{max-width:340px;padding:25px;text-align:center}
+    .load-copy p{margin:0 0 15px}
+    .load-copy a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid var(--line);border-radius:8px;background:white}
+    body[data-device="phone"] .stage{padding:16px}
+    body[data-device="phone"] .frame-shell{width:min(390px,100%);border-radius:13px;box-shadow:0 12px 42px #21392c16}
+    body[data-device="compact"] .stage{padding:16px}
+    body[data-device="compact"] .frame-shell{width:min(320px,100%);border-radius:13px;box-shadow:0 12px 42px #21392c16}
+    body[data-device="phone"] .load-state,body[data-device="compact"] .load-state{inset:16px;border-radius:13px}
+    noscript{flex:none;padding:14px;text-align:center;background:#fff8e9;color:#533c1d}
+    noscript a{text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:1100px){.toolbar{grid-template-columns:minmax(150px,.55fr) minmax(0,1.65fr);gap:10px 16px;padding:11px 16px}.actions{grid-column:2;grid-row:1;gap:8px}.brand{grid-column:1;grid-row:1}.variants{grid-column:1/-1;grid-row:2}}
+    @media(max-width:680px){.toolbar{grid-template-columns:minmax(0,1fr) auto;padding:9px 11px;gap:8px 10px}.brand{grid-column:1;grid-row:1}.brand-mark{width:33px;height:33px;border-radius:9px;font-size:18px}.brand{gap:8px}.brand-copy strong{font-size:12px}.brand-copy small{font-size:10px}.actions{grid-column:2;grid-row:1;gap:5px}.open-link{min-height:38px;padding:7px 8px;font-size:0}.open-link .open-label{font-size:10px}.replay{min-height:38px;min-width:38px}.device-group{gap:0}.device-group button{min-width:35px;min-height:34px;padding:6px 5px;font-size:10px}.variants{grid-column:1/-1;grid-row:2;gap:3px;padding:3px}.variants button{min-height:42px;padding:6px 5px;text-align:center}.variant-letter{width:18px;height:18px;margin-right:3px;font-size:9px}.variant-label{font-size:11px}.active-info{min-height:29px;padding:0 12px;font-size:10px}.active-info span:last-child{display:none}body[data-device="phone"] .stage{padding:10px 0}body[data-device="compact"] .stage{padding:0}body[data-device="phone"] .frame-shell,body[data-device="compact"] .frame-shell{border-radius:10px}body[data-device="phone"] .load-state{inset:10px 0;border-radius:10px}body[data-device="compact"] .load-state{inset:0;border-radius:0}}
+    @media(max-width:420px){.toolbar{grid-template-columns:minmax(0,1fr);padding:8px 10px;gap:7px}.brand{grid-column:1;grid-row:1}.actions{grid-column:1;grid-row:2;justify-content:space-between}.variants{grid-column:1;grid-row:3}.active-info{padding-inline:10px}.active-info strong{white-space:nowrap}}
+    @media(max-width:350px){.toolbar{padding-inline:8px}.brand-mark{width:30px;height:30px}.brand-copy small{display:none}.actions{gap:4px}.device-group button{min-width:31px;padding-inline:3px}.open-link{padding-inline:6px}.variants button{padding-inline:2px}.variant-label{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body data-device="desktop">
-  <header class="toolbar">
-    <div class="title">个人客户页面<small>两种方向，直接切换比较</small></div>
-    <nav class="variants" aria-label="选择页面版本">
-      <button type="button" data-version="star" aria-pressed="true">A · 需求引导版</button>
-      <button type="button" data-version="beniverse" aria-pressed="false">B · 律师介绍版</button>
+  <header class="toolbar" aria-label="个人业务页面比较">
+    <a class="brand" href="https://github.com/2873190719-sudo/legal-com" target="_blank" rel="noopener" aria-label="打开邓彩婷律师网站源码仓库">
+      <span class="brand-mark" aria-hidden="true">邓</span>
+      <span class="brand-copy"><strong>个人业务页面</strong><small>四种设计 · 选择最适合转介绍的一版</small></span>
+    </a>
+    <nav class="variants" aria-label="选择页面设计">
+      <button id="version-star" type="button" data-version="star" aria-pressed="true"><span class="variant-letter" aria-hidden="true">A</span><span class="variant-label">需求引导</span></button>
+      <button id="version-beniverse" type="button" data-version="beniverse" aria-pressed="false"><span class="variant-letter" aria-hidden="true">B</span><span class="variant-label">律师介绍</span></button>
+      <button id="version-ressuman" type="button" data-version="ressuman" aria-pressed="false"><span class="variant-letter" aria-hidden="true">C</span><span class="variant-label">律所经典</span></button>
+      <button id="version-nova" type="button" data-version="nova" aria-pressed="false"><span class="variant-letter" aria-hidden="true">D</span><span class="variant-label">Nova 编辑</span></button>
     </nav>
-    <div class="display-options" role="group" aria-label="预览尺寸">
-      <button type="button" data-device="desktop" aria-pressed="true">电脑</button>
-      <button type="button" data-device="phone" aria-pressed="false">手机</button>
-      <a class="open-link" id="openCurrent" href="personal-star.html" target="_blank" rel="noopener">单独打开 ↗</a>
+    <div class="actions" role="group" aria-label="预览工具">
+      <div class="device-group" role="group" aria-label="预览屏幕尺寸">
+        <button type="button" data-device="desktop" aria-pressed="true" aria-label="电脑预览">电脑</button>
+        <button type="button" data-device="phone" aria-pressed="false" aria-label="390像素手机预览">390</button>
+        <button type="button" data-device="compact" aria-pressed="false" aria-label="320像素手机预览">320</button>
+      </div>
+      <button class="replay" id="replayMotion" type="button" aria-label="重新播放入场效果" title="重新播放入场效果">↻</button>
+      <a class="open-link" id="openCurrent" href="personal-star.html" target="_blank" rel="noopener"><span class="open-label">单独打开 ↗</span></a>
     </div>
   </header>
-  <noscript>直接查看 <a href="personal-star.html">需求引导版</a> 或 <a href="personal-beniverse.html">律师介绍版</a>。</noscript>
+  <div class="active-info" aria-live="polite" aria-atomic="true"><strong id="pageName">A · 需求引导</strong><span id="pageNote">深绿与金色 · 从八类常见需求开始</span><span id="pageRef">参考 Star Law · 需求分流与步骤</span></div>
   <main class="stage">
-    <iframe id="preview" src="personal-star.html" title="需求引导版个人客户页面"></iframe>
+    <div class="frame-shell" id="frameShell">
+      <iframe id="preview" src="personal-star.html" title="需求引导版个人法律服务页面" loading="eager"></iframe>
+    </div>
+    <div class="load-state" id="loadState" data-visible="false" aria-live="polite"><div class="load-copy"><p id="loadMessage">正在打开这个设计…</p><a id="retryPreview" href="personal-star.html">单独打开页面</a></div></div>
   </main>
+  <noscript><strong>此比较页的按钮需要启用 JavaScript。</strong> 也可以直接浏览 <a href="personal-star.html">需求引导版</a>、<a href="personal-beniverse.html">律师介绍版</a>、<a href="personal-ressuman.html">律所经典版</a> 与 <a href="personal-nova.html">Nova 编辑版</a>。</noscript>
   <script>
-    (() => {
-      const frame = document.getElementById('preview');
-      const openCurrent = document.getElementById('openCurrent');
-      const versions = { star: ['personal-star.html', '需求引导版'], beniverse: ['personal-beniverse.html', '律师介绍版'] };
-      document.querySelectorAll('[data-version]').forEach(button => {
-        button.addEventListener('click', () => {
-          const [url, name] = versions[button.dataset.version];
-          document.querySelectorAll('[data-version]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-          frame.src = url;
-          frame.title = name + '个人客户页面';
-          openCurrent.href = url;
-        });
-      });
-      document.querySelectorAll('button[data-device]').forEach(button => {
-        button.addEventListener('click', () => {
-          document.body.dataset.device = button.dataset.device;
-          document.querySelectorAll('button[data-device]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-        });
-      });
-      frame.addEventListener('load', () => {
-        try {
-          const switcher = frame.contentDocument.querySelector('.preview-switcher');
-          if (switcher) switcher.hidden = true;
-        } catch { /* Standalone links remain available when framed access is unavailable. */ }
-      });
+    (()=>{"use strict";
+      const pages={star:{url:"personal-star.html",name:"需求引导",note:"深绿与金色 · 从八类常见需求开始",ref:"参考 Star Law · 需求分流与步骤"},beniverse:{url:"personal-beniverse.html",name:"律师介绍",note:"海军蓝与衬线 · 先认识律师，再浏览服务",ref:"参考 beniverse · 摄影首屏与律师介绍"},ressuman:{url:"personal-ressuman.html",name:"律所经典",note:"红白律所 · 律师介绍、流程与服务目录",ref:"参考 Law Firm · 红白首页与咨询区"},nova:{url:"personal-nova.html",name:"Nova 编辑",note:"奶白与铜色 · 不等比摄影与编辑排版",ref:"参考 Nova · 摄影 bento 与编辑排版"}};
+      const byId=id=>document.getElementById(id),frame=byId("preview"),shell=byId("frameShell"),open=byId("openCurrent"),retry=byId("retryPreview"),status=byId("loadState"),message=byId("loadMessage");
+      const setBusy=(busy)=>{status.dataset.visible=String(busy);shell.setAttribute("aria-busy",String(busy));};
+      let version="star",timer=0;
+      const changeVersion=(next,replay=false)=>{if(!pages[next])return;version=next;const page=pages[next];document.querySelectorAll("[data-version]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.version===next)));byId("pageName").textContent=String.fromCharCode(65+Object.keys(pages).indexOf(next))+" · "+page.name;byId("pageNote").textContent=page.note;byId("pageRef").textContent=page.ref;frame.title=page.name+"版个人法律服务页面";open.href=page.url;retry.href=page.url;message.textContent="正在打开"+page.name+"版页面…";clearTimeout(timer);setBusy(true);frame.src=page.url+(replay?"?motion="+Date.now():"");timer=setTimeout(()=>{if(status.dataset.visible==="true"){message.textContent="页面还没有完成加载，可以直接打开这版页面查看。"}},13000);};
+      frame.addEventListener("load",()=>{clearTimeout(timer);setBusy(false);try{const switcher=frame.contentDocument?.querySelector(".preview-switcher");if(switcher)switcher.hidden=true;}catch{}});
+      document.querySelectorAll("[data-version]").forEach(button=>button.addEventListener("click",()=>changeVersion(button.dataset.version)));
+      document.querySelectorAll("button[data-device]").forEach(button=>button.addEventListener("click",()=>{document.body.dataset.device=button.dataset.device;document.querySelectorAll("button[data-device]").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));}));
+      byId("replayMotion").addEventListener("click",()=>changeVersion(version,true));
+      const initial=new URLSearchParams(location.search).get("v");if(initial&&pages[initial])changeVersion(initial);else setBusy(true);
     })();
   </script>
 </body>

@@ -1,5 +1,5 @@
-// 上线前填写真实执业姓名和接待律师的微信二维码路径。
-// 二维码图片建议放在 assets 目录，例如 assets/wechat-qr.png。
+// 两个业务页面共用真实执业姓名与接待律师联系方式。
+// screenshot 保留原始微信截图的展示方式；未知微信号或接待律师姓名保持空值。
 window.SITE_CONFIG = {
   leadLawyerName: "邓彩婷",
   contactLawyerName: "",
